@@ -6,9 +6,13 @@ $conn = mysqli_connect('localhost', 'root', '', 'belajar');
 $result = mysqli_query($conn, "SELECT * FROM data_mahasiswa");
 
 // Ubah data ke dalam bentuk Array
-mysqli_fetch_row($result);
+$rows = [];
+while ($row = mysqli_fetch_assoc($result)) {
+  $rows[] = $row;
+}
 
 // Simpan ke variable Mahasiswa 
+$mahasiswa = $rows;
 
 ?>
 
@@ -34,18 +38,21 @@ mysqli_fetch_row($result);
       <th>TLP</th>
       <th>AKSI</th>
     </tr>
-    <tr>
-      <td>1</td>
-      <td><img src="Image/2109.jpg" width="60"></td>
-      <td>18416255201162</td>
-      <td>IQBAL ALFIAN</td>
-      <td>IF18F</td>
-      <td>TEKNIK INFORMATIKA</td>
-      <td>081214449996</td>
-      <td>
-        <a href="">Edit</a> | <a href="">Delete</a>
-      </td>
-    </tr>
+    <?php $i = 1;
+    foreach ($mahasiswa as $m) : ?>
+      <tr>
+        <td><?= $i++; ?></td>
+        <td><img src="Image/<?= $m['Gambar']; ?>" width="60"></td>
+        <td><?= $m['Nim']; ?></td>
+        <td><?= $m['Nama']; ?></td>
+        <td><?= $m['Kelas']; ?></td>
+        <td><?= $m['Jurusan']; ?></td>
+        <td><?= $m['Tlp']; ?></td>
+        <td>
+          <a href="">Edit</a> | <a href="">Delete</a>
+        </td>
+      </tr>
+    <?php endforeach; ?>
     <table>
 
       <script type="text/javascript">
