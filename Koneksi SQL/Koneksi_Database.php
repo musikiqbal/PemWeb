@@ -15,13 +15,13 @@ $mahasiswa = query("SELECT * FROM data_mahasiswa");
 
   <table border="1" cellpadding="5" cellspacing="0">
     <tr>
-      <th>No</th>
+      <th>#</th>
       <th>Gambar</th>
       <th>NIM</th>
       <th>NAMA</th>
       <th>KELAS</th>
       <th>JURUSAN</th>
-      <th>TLP</th>
+      <th>EMAIL</th>
       <th>AKSI</th>
     </tr>
     <?php $i = 1;
@@ -33,7 +33,7 @@ $mahasiswa = query("SELECT * FROM data_mahasiswa");
         <td><?= $m['Nama']; ?></td>
         <td><?= $m['Kelas']; ?></td>
         <td><?= $m['Jurusan']; ?></td>
-        <td><?= $m['Tlp']; ?></td>
+        <td><?= $m['Email']; ?></td>
         <td>
           <a href="">Edit</a> | <a href="">Delete</a>
         </td>

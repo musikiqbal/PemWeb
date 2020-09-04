@@ -15,9 +15,9 @@ $mahasiswa = query("SELECT * FROM data_mahasiswa");
 
   <table border="1" cellpadding="5" cellspacing="0">
     <tr>
-      <th>No</th>
+      <th>#</th>
       <th>Gambar</th>
-      <th>NIM</th>
+      <th>NAMA</th>
       <th>AKSI</th>
     </tr>
     <?php $i = 1;
@@ -25,7 +25,7 @@ $mahasiswa = query("SELECT * FROM data_mahasiswa");
       <tr>
         <td><?= $i++; ?></td>
         <td><img src="Image/<?= $m['Gambar']; ?>" width="60"></td>
-        <td><?= $m['Nim']; ?></td>
+        <td><?= $m['Nama']; ?></td>
         <td>
           <a href="detail.php?id=<?= $m['id']; ?>">Lihat Detail</a>
         </td>
