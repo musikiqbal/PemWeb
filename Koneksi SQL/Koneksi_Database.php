@@ -1,5 +1,5 @@
 <?php
-require 'Functions.php';
+//Catatan
 // Koneksi ke Database dan Pilih Databasenya
 //$conn = mysqli_connect('localhost', 'root', '', 'belajar');
 
@@ -13,10 +13,9 @@ require 'Functions.php';
 //}
 
 // Simpan ke variable Mahasiswa 
+require 'Functions.php';
 $mahasiswa = query("SELECT * FROM data_mahasiswa");
-
 ?>
-
 <!DOCTYPE html>
 <html>
 
