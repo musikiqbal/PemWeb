@@ -1,5 +1,4 @@
 <?php
-
 require 'Functions.php';
 $mahasiswa = query("SELECT * FROM data_mahasiswa");
 ?>
@@ -18,7 +17,7 @@ $mahasiswa = query("SELECT * FROM data_mahasiswa");
     <tr>
       <th>No</th>
       <th>Gambar</th>
-      <th>NAMA</th>
+      <th>NIM</th>
       <th>AKSI</th>
     </tr>
     <?php $i = 1;
@@ -26,7 +25,7 @@ $mahasiswa = query("SELECT * FROM data_mahasiswa");
       <tr>
         <td><?= $i++; ?></td>
         <td><img src="Image/<?= $m['Gambar']; ?>" width="60"></td>
-        <td><?= $m['Nama']; ?></td>
+        <td><?= $m['Nim']; ?></td>
         <td>
           <a href="detail.php?id=<?= $m['id']; ?>">Lihat Detail</a>
         </td>
