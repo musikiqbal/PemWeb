@@ -1,18 +1,19 @@
-<?php
+<?
+require 'Functions.php';
 // Koneksi ke Database dan Pilih Databasenya
-$conn = mysqli_connect('localhost', 'root', '', 'belajar');
+//$conn = mysqli_connect('localhost', 'root', '', 'belajar');
 
 // Query isi tabel Mahasiswa
-$result = mysqli_query($conn, "SELECT * FROM data_mahasiswa");
+//$result = mysqli_query($conn, "SELECT * FROM data_mahasiswa");
 
 // Ubah data ke dalam bentuk Array
-$rows = [];
-while ($row = mysqli_fetch_assoc($result)) {
-  $rows[] = $row;
+//$rows = [];
+//while ($row = mysqli_fetch_assoc($result)) {
+//  $rows[] = $row;
 }
 
 // Simpan ke variable Mahasiswa 
-$mahasiswa = $rows;
+$mahasiswa = query ("SELECT * FROM data_mahasiswa"); 
 
 ?>
 
