@@ -1,4 +1,4 @@
-<?
+<?php
 require 'Functions.php';
 // Koneksi ke Database dan Pilih Databasenya
 //$conn = mysqli_connect('localhost', 'root', '', 'belajar');
@@ -10,10 +10,10 @@ require 'Functions.php';
 //$rows = [];
 //while ($row = mysqli_fetch_assoc($result)) {
 //  $rows[] = $row;
-}
+//}
 
 // Simpan ke variable Mahasiswa 
-$mahasiswa = query ("SELECT * FROM data_mahasiswa"); 
+$mahasiswa = query("SELECT * FROM data_mahasiswa");
 
 ?>
 
