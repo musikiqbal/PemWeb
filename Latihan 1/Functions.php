@@ -74,3 +74,20 @@ function Edit($data)
   echo mysqli_error($conn);
   return mysqli_affected_rows($conn);
 }
+
+function search($keyword)
+{
+  $conn = koneksi();
+
+  $query = "SELECT * FROM data_mahasiswa 
+            Where Nama LIKE '%$keyword%' OR
+            Nim LIKE '%$keyword%'";
+
+  $result = mysqli_query($conn, $query);
+
+  $rows = [];
+  while ($row = mysqli_fetch_assoc($result)) {
+    $rows[] = $row;
+  }
+  return $rows;
+}
