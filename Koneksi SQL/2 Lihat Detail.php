@@ -12,7 +12,7 @@ $mahasiswa = query("SELECT * FROM data_mahasiswa");
 
 <body>
   <h3>Daftar Mahasiswa</h3>
-  <a href="">Tambah Data Mahasiswa</a>
+  <a href="4 tambah.php">Tambah Data Mahasiswa</a>
   <br><br>
 
   <table border="1" cellpadding="5" cellspacing="0">
@@ -29,7 +29,7 @@ $mahasiswa = query("SELECT * FROM data_mahasiswa");
         <td><img src="Image/<?= $m['Gambar']; ?>" width="60"></td>
         <td><?= $m['Nama']; ?></td>
         <td>
-          <a href="detail.php?id=<?= $m['id']; ?>">Lihat Detail</a>
+          <a href="3 detail.php?id=<?= $m['id']; ?>">Lihat Detail</a>
         </td>
       </tr>
     <?php endforeach; ?>

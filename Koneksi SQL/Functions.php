@@ -21,3 +21,22 @@ function query($query)
   }
   return $rows;
 }
+
+function Tambah($data)
+{
+  $conn = koneksi();
+
+  $Gambar = htmlspecialchars($data['Gambar']);
+  $Nama = htmlspecialchars($data['Nama']);
+  $Nim = htmlspecialchars($data['Nim']);
+  $Kelas = htmlspecialchars($data['Kelas']);
+  $Jurusan = htmlspecialchars($data['Jurusan']);
+  $Email = htmlspecialchars($data['Email']);
+
+  $query = "INSERT INTO data_mahasiswa VALUES
+  (null, '$Gambar', '$Nama', '$Nim', '$Kelas', '$Jurusan', '$Email');";
+
+  mysqli_query($conn, $query);
+  echo mysqli_error($conn);
+  return mysqli_affected_rows($conn);
+}

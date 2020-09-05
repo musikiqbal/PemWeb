@@ -23,7 +23,7 @@ $m = query("SELECT * FROM data_mahasiswa WHERE id = $id");
     <li>JURUSAN : <?= $m['Jurusan']; ?></li>
     <li>EMAIL : <?= $m['Email']; ?></li>
     <li><a href="">Edit</a> | <a href="">Delete</a></li>
-    <li><a href="Lihat Detail.php">Back</a></li>
+    <li><a href="2 Lihat Detail.php">Back</a></li>
   </ul>
 </body>
 
