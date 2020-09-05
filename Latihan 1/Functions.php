@@ -36,7 +36,41 @@ function Tambah($data)
   $query = "INSERT INTO data_mahasiswa VALUES
   (null, '$Gambar', '$Nama', '$Nim', '$Kelas', '$Jurusan', '$Email');";
 
-  mysqli_query($conn, $query);
+  mysqli_query($conn, $query) or die(mysqli_error($conn));
+  echo mysqli_error($conn);
+  return mysqli_affected_rows($conn);
+}
+
+function hapus($id)
+{
+  $conn = koneksi();
+
+  mysqli_query($conn, "DELETE FROM data_mahasiswa WHERE id=$id") or die(mysqli_error($conn));
+  return mysqli_affected_rows($conn);
+}
+
+function Edit($data)
+{
+  $conn = koneksi();
+
+  $id = htmlspecialchars($data['id']);
+  $Gambar = htmlspecialchars($data['Gambar']);
+  $Nama = htmlspecialchars($data['Nama']);
+  $Nim = htmlspecialchars($data['Nim']);
+  $Kelas = htmlspecialchars($data['Kelas']);
+  $Jurusan = htmlspecialchars($data['Jurusan']);
+  $Email = htmlspecialchars($data['Email']);
+
+  $query = "UPDATE data_mahasiswa SET 
+            Gambar = '$Gambar', 
+            Nama = '$Nama', 
+            Nim = '$Nim', 
+            Kelas = '$Kelas', 
+            Jurusan = '$Jurusan', 
+            Email = '$Email' 
+            WHERE id = $id";
+
+  mysqli_query($conn, $query) or die(mysqli_error($conn));
   echo mysqli_error($conn);
   return mysqli_affected_rows($conn);
 }

@@ -22,7 +22,8 @@ $m = query("SELECT * FROM data_mahasiswa WHERE id = $id");
     <li>Kelas : <?= $m['Kelas']; ?></li>
     <li>JURUSAN : <?= $m['Jurusan']; ?></li>
     <li>EMAIL : <?= $m['Email']; ?></li>
-    <li><a href="">Edit</a> | <a href="">Delete</a></li>
+    <li><a href="4 edit.php?id=<?= $m['id']; ?>" onclick="return confirm('Apakah Anda akan mengedit data ini...?');">Edit</a>
+      | <a href="3 hapus.php?id=<?= $m['id']; ?>" onclick="return confirm('Apakah Anda akan menghapus data ini...?');">Delete</a></li>
     <li><a href="Index.php">Back</a></li>
   </ul>
 </body>
