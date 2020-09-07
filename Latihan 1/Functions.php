@@ -91,3 +91,24 @@ function search($keyword)
   }
   return $rows;
 }
+
+function login($data)
+{
+  $conn = koneksi();
+
+  $username = htmlspecialchars(($data['Username']));
+  $password = htmlspecialchars(($data['Password']));
+
+  if ($username == 'admin' && $password == '12345') {
+    //set session
+    $_SESSION['Login'] = true;
+
+    header("Location: Index.php");
+    exit;
+  } else {
+    return [
+      'Error' => True,
+      'Pesan' => 'Username / Password Salah !'
+    ];
+  }
+}

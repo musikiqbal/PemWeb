@@ -1,4 +1,11 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['Login'])) {
+  header("Location: Login.php");
+  exit;
+}
+
 require 'Functions.php';
 $id = $_GET['id'];
 $m = query("SELECT * FROM data_mahasiswa WHERE id = $id");
