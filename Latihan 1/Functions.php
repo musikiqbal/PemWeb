@@ -99,7 +99,7 @@ function login($data)
   $username = htmlspecialchars(($data['Username']));
   $password = htmlspecialchars(($data['Password']));
 
-  if ($username == 'admin' && $password == '12345') {
+  if (query("SELECT 6 FROM user WHERE username = '$username' && password = '$password'")) {
     //set session
     $_SESSION['Login'] = true;
 
