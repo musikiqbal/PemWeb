@@ -45,6 +45,9 @@ if (isset($_POST['Login'])) {
       <li>
         <button type="submit" name="Login">Login</button>
       </li>
+      <li>
+        <a href="Daftar.php">Daftar</a>
+      </li>
     </ul>
   </form>
 </body>

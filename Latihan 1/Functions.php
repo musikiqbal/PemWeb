@@ -99,16 +99,82 @@ function login($data)
   $username = htmlspecialchars(($data['Username']));
   $password = htmlspecialchars(($data['Password']));
 
-  if (query("SELECT 6 FROM user WHERE username = '$username' && password = '$password'")) {
-    //set session
-    $_SESSION['Login'] = true;
+  //Cek username
 
-    header("Location: Index.php");
-    exit;
-  } else {
-    return [
-      'Error' => True,
-      'Pesan' => 'Username / Password Salah !'
-    ];
+  if ($user = query("SELECT * FROM user WHERE username = '$username'")) {
+
+    //cek Password
+
+    if (password_verify($password, $user['Password'])) {
+      //set session
+      $_SESSION['Login'] = true;
+
+      header("Location: Index.php");
+      exit;
+    }
   }
+  return [
+    'Error' => True,
+    'Pesan' => 'Username / Password Salah !'
+  ];
+}
+
+function Daftar($data)
+{
+  $conn = koneksi();
+
+  $username = htmlspecialchars(strtolower($data['username']));
+  $password1 = mysqli_real_escape_string($conn, $data['password1']);
+  $password2 = mysqli_real_escape_string($conn, $data['password2']);
+
+  //Jika username / password kosong
+  if (empty($username) || empty($password1) || empty($password2)) {
+    echo "<script>
+          alert('Username / Password Tidak Boleh Kosong !');
+          document.location.href='Daftar.php';
+          </script>";
+    return false;
+  }
+
+  // Jika username sudah ada
+  if (query("SELECT * FROM user WHERE username = '$username' ")) {
+    echo "<script>
+          alert('Username Sudah Terdaftar !');
+          document.location.href='Daftar.php';
+          </script>";
+    return false;
+  }
+
+  //Jika Konfirmasi password ridak sesuai
+  if ($password1 !== $password2) {
+    echo "<script>
+          alert('Password Tidak Sesuai !');
+          document.location.href='Daftar.php';
+          </script>";
+    return false;
+  }
+  //Pembatasan jumlah karakter password
+  if (strlen($password1) < 5) {
+    echo "<script>
+          alert('Password Terlalu Pendek !');
+          document.location.href='Daftar.php';
+          </script>";
+    return false;
+  }
+  //pembatasan jumlah karakter username
+  if (strlen($username) < 5) {
+    echo "<script>
+          alert('Username Terlalu Pendek !');
+          document.location.href='Daftar.php';
+          </script>";
+    return false;
+  }
+  //Jika Sudah sesuai Maka :
+  //1. Enkripsi Password
+  $password_baru = password_hash($password1, PASSWORD_DEFAULT);
+
+  //2. Insert Ke tabel
+  $query = "INSERT INTO user VALUES (null, '$username', '$password_baru')";
+  mysqli_query($conn, $query) or die(mysqli_error($conn));
+  return mysqli_affected_rows($conn);
 }
