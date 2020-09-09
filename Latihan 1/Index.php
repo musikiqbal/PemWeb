@@ -28,40 +28,44 @@ if (isset($_POST['Search'])) {
   <br><br>
 
   <form action="" method="POST">
-    <input type="text" name="keyword" size="30" placeholder="Masukkan Nama / Nim Mahasiswa" autocomplete="off" autofocus>
-    <button type="submit" name="Search">Search</button>
+    <input type="text" name="keyword" size="30" placeholder="Masukkan Nama / Nim Mahasiswa" autocomplete="off" autofocus class="keyword">
+    <button type="submit" name="Search" class="tombol-cari">Search</button>
   </form>
   <br>
 
+  <div class="container">
 
-  <table border="1" cellpadding="5" cellspacing="0">
-    <tr>
-      <th>#</th>
-      <th>Gambar</th>
-      <th>NAMA</th>
-      <th>AKSI</th>
-    </tr>
 
-    <?php if (empty($mahasiswa)) : ?>
+    <table border="1" cellpadding="5" cellspacing="0">
       <tr>
-        <td colspan="4">
-          <p style="color:brown ;font-style:italic;">Data Tidak Ditemukan !</p>
-        </td>
+        <th>#</th>
+        <th>Gambar</th>
+        <th>NAMA</th>
+        <th>AKSI</th>
       </tr>
-    <?php endif; ?>
 
-    <?php $i = 1;
-    foreach ($mahasiswa as $m) : ?>
-      <tr>
-        <td><?= $i++; ?></td>
-        <td><img src="Image/<?= $m['Gambar']; ?>" width="60"></td>
-        <td><?= $m['Nama']; ?></td>
-        <td>
-          <a href="1 detail.php?id=<?= $m['id']; ?>">Lihat Detail</a>
-        </td>
-      </tr>
-    <?php endforeach; ?>
-    <table>
+      <?php if (empty($mahasiswa)) : ?>
+        <tr>
+          <td colspan="4">
+            <p style="color:brown ;font-style:italic;">Data Tidak Ditemukan !</p>
+          </td>
+        </tr>
+      <?php endif; ?>
+
+      <?php $i = 1;
+      foreach ($mahasiswa as $m) : ?>
+        <tr>
+          <td><?= $i++; ?></td>
+          <td><img src="Image/<?= $m['Gambar']; ?>" width="60"></td>
+          <td><?= $m['Nama']; ?></td>
+          <td>
+            <a href="1 detail.php?id=<?= $m['id']; ?>">Lihat Detail</a>
+          </td>
+        </tr>
+      <?php endforeach; ?>
+      <table>
+  </div>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
