@@ -12,9 +12,9 @@ keyword.addEventListener('keyup', function () {
 
   xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {
-      console.log('OK !');
+      console.log(xhr.responseText);
     }
   };
-  xhr.open('get', 'ajax/ajax_cari.php');
+  xhr.open('get', 'ajax/ajax_cari.php?keyword=' + keyword.value);
   xhr.send();
 });
