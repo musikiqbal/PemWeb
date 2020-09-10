@@ -2,19 +2,27 @@ const tombolCari = document.querySelector('.tombol-cari');
 const keyword = document.querySelector('.keyword');
 const container = document.querySelector('.container');
 
+//menghilangkan tombol cari
+tombolCari.style.display = 'none';
+
 //Event ketika menuliskan keyword
 keyword.addEventListener('keyup', function () {
 
 
-  //Ajax
+  //Ajax Pake cara lama
   //XmlHttpRequest
-  const xhr = new XMLHttpRequest();
+  //const xhr = new XMLHttpRequest();
 
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState == 4 && xhr.status == 200) {
-      console.log(xhr.responseText);
-    }
-  };
-  xhr.open('get', 'ajax/ajax_cari.php?keyword=' + keyword.value);
-  xhr.send();
+  //xhr.onreadystatechange = function () {
+  // if (xhr.readyState == 4 && xhr.status == 200) {
+  //  container.innerHTML = xhr.responseText;
+  // }
+  // };
+  //xhr.open('get', 'ajax/ajax_cari.php?keyword=' + keyword.value);
+  //xhr.send();
+
+  //Ajax pake cara baru
+  fetch('ajax/ajax_cari.php?keyword=' + keyword.value)
+    .then((Response) => Response.text())
+    .then((Response) => (container.innerHTML = Response));
 });
