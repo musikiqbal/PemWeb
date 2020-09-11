@@ -31,7 +31,7 @@ document.location.href='Index.php';
 
 <body>
   <h3>Tambah Data Mahasiswa</h3>
-  <form action="" method="POST">
+  <form action="" method="POST" enctype="multipart/form-data">
     <ul>
       <li>
         <label>
@@ -66,7 +66,7 @@ document.location.href='Index.php';
       <li>
         <label>
           Gambar :
-          <input type="text" name="Gambar" required>
+          <input type="file" name="Gambar">
         </label>
       </li>
       <li>

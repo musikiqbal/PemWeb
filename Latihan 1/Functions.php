@@ -22,11 +22,76 @@ function query($query)
   return $rows;
 }
 
+//Cara Upload Gambar
+function upload()
+{
+  $nama_file = $_FILES['Gambar']['name'];
+  $tipe_file = $_FILES['Gambar']['type'];
+  $ukuran_file = $_FILES['Gambar']['size'];
+  $error = $_FILES['Gambar']['error'];
+  $tmp_file = $_FILES['Gambar']['tmp_name'];
+
+  //ketika tidak ada gambar yang dipilih
+  if ($error == 4) {
+    echo "<script>
+    alert ('Gambar harus terisi !');
+    </script>";
+    return false;
+  }
+
+  //Cek extension gambar
+  $daftar_gambar = ['jpg', 'jpeg', 'png'];
+  $ekstensi_file = explode('.', $nama_file);
+  $ekstensi_file = strtolower(end($ekstensi_file));
+
+  if (!in_array($ekstensi_file, $daftar_gambar)) {
+    echo "<script>
+    alert ('Gambar harus berekstensi : jgp , jpeg, png');
+    </script>";
+    return false;
+  }
+
+  //cek type file gambar
+  if ($tipe_file != 'image/jpeg' && $tipe_file != 'image/png') {
+    echo "<script>
+  alert ('Format Gambar Palsu, mohon diisi sesuai format !');
+  </script>";
+    return false;
+  }
+
+  //cek ukuran file gambar
+  //misal : max 5Mb
+  if ($ukuran_file > 5000000) {
+    echo "<script>
+  alert ('Ukuran gambar terlalu besar !');
+  </script>";
+    return false;
+  }
+
+  //ketika file gambar memenuhi syarat
+  //Generate nama file gambar baru
+  $nama_file_baru = uniqid();
+  $nama_file_baru .= '.';
+  $nama_file_baru .= $ekstensi_file;
+
+  //maka upload file
+  move_uploaded_file($tmp_file, 'Image/' . $nama_file_baru);
+  return $nama_file_baru;
+}
+
+
 function Tambah($data)
 {
   $conn = koneksi();
 
-  $Gambar = htmlspecialchars($data['Gambar']);
+
+
+  //$Gambar = htmlspecialchars($data['Gambar']);
+  //Upload gambar
+  $Gambar = upload();
+  if (!$Gambar) {
+    return false;
+  }
   $Nama = htmlspecialchars($data['Nama']);
   $Nim = htmlspecialchars($data['Nim']);
   $Kelas = htmlspecialchars($data['Kelas']);
