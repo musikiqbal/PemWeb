@@ -33,10 +33,10 @@ function upload()
 
   //ketika tidak ada gambar yang dipilih
   if ($error == 4) {
-    echo "<script>
-    alert ('Gambar harus terisi !');
-    </script>";
-    return false;
+    //echo "<script>
+    //alert ('Gambar harus terisi !');
+    //</script>";
+    return 'nophoto.png';
   }
 
   //Cek extension gambar
@@ -110,6 +110,13 @@ function hapus($id)
 {
   $conn = koneksi();
 
+  //Menghapus gambar dalam folder local
+  $mhs = query("SELECT * FROM data_mahasiswa WHERE id = $id");
+  if ($mhs['Gambar'] != 'nophoto.png') {
+    unlink('Image/' . $mhs['Gambar']);
+  }
+
+
   mysqli_query($conn, "DELETE FROM data_mahasiswa WHERE id=$id") or die(mysqli_error($conn));
   return mysqli_affected_rows($conn);
 }
@@ -119,7 +126,16 @@ function Edit($data)
   $conn = koneksi();
 
   $id = htmlspecialchars($data['id']);
-  $Gambar = htmlspecialchars($data['Gambar']);
+  $gambar_lama = htmlspecialchars($data['gambar_lama']);
+
+  $Gambar = upload();
+  if (!$Gambar) {
+    return false;
+  }
+  if ($Gambar == 'nophoto.png') {
+    $Gambar = $gambar_lama;
+  }
+
   $Nama = htmlspecialchars($data['Nama']);
   $Nim = htmlspecialchars($data['Nim']);
   $Kelas = htmlspecialchars($data['Kelas']);

@@ -43,14 +43,16 @@ document.location.href='Index.php';
 
 <body>
   <h3>Edit Data Mahasiswa</h3>
-  <form action="" method="POST">
+  <form action="" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="id" value="<?= $m['id']; ?>">
     <ul>
       <li>
+        <input type="hidden" name="gambar_lama" value="<?= $m['Gambar']; ?>">
         <label>
           Gambar :
-          <input type="text" name="Gambar" required value="<?= $m['Gambar']; ?>">
+          <input type="file" name="Gambar" class="Gambar" onchange="previewImage()">
         </label>
+        <img src="Image/<?= $m['Gambar']; ?>" width="200" style="display: block;" class="Image-Preview">
       </li>
       <li>
         <label>
@@ -87,6 +89,7 @@ document.location.href='Index.php';
       </li>
     </ul>
   </form>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

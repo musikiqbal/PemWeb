@@ -26,3 +26,16 @@ keyword.addEventListener('keyup', function () {
     .then((Response) => Response.text())
     .then((Response) => (container.innerHTML = Response));
 });
+
+//Preview Gambar
+function previewImage() {
+  const Gambar = document.querySelector('.Gambar');
+  const ImagePreview = document.querySelector('.Image-Preview');
+
+  const oFReader = new FileReader();
+  oFReader.readAsDataURL(Gambar.files[0]);
+
+  oFReader.onload = function (oFREvent) {
+    ImagePreview.src = oFREvent.target.result;
+  };
+}

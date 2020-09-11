@@ -66,14 +66,16 @@ document.location.href='Index.php';
       <li>
         <label>
           Gambar :
-          <input type="file" name="Gambar">
+          <input type="file" name="Gambar" class="Gambar" onchange="previewImage()">
         </label>
+        <img src="Image/nophoto.png" width="200" style="display: block;" class="Image-Preview">
       </li>
       <li>
         <button type="submit" name="Tambah">Tambah Data</button>
       </li>
     </ul>
   </form>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

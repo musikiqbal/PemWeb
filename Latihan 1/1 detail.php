@@ -23,7 +23,7 @@ $m = query("SELECT * FROM data_mahasiswa WHERE id = $id");
 <body>
   <h3>DETAIL MAHASISWA</h3>
   <ul>
-    <li><img src="Image/<?= $m['Gambar']; ?>" width="60"></li>
+    <li><img src="Image/<?= $m['Gambar']; ?>" width="250"></li>
     <li>NIM : <?= $m['Nim']; ?></li>
     <li>NAMA : <?= $m['Nama']; ?></li>
     <li>Kelas : <?= $m['Kelas']; ?></li>
