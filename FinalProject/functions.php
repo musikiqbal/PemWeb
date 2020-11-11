@@ -211,7 +211,7 @@ function login($data)
       $_SESSION['login'] = true;
 
 
-      header("Location: index.php");
+      header("Location: sini.html");
       exit;
     }
   }
