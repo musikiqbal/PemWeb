@@ -62,7 +62,7 @@ if (isset($_POST['login'])) {
             <button type="submit" name="login" class="btn btn-primary btn-xl js-scroll-trigger" style="width: 30%; margin-right: 3.5%;">Login</button>
           </li>
           <li>
-            <a href="index.html" style="color: white; margin-right: 3.5%;">Back</a>
+            <a href="index.php" style="color: white; margin-right: 3.5%;">Back</a>
           </li>
         </ul>
       </form>
