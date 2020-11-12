@@ -24,6 +24,7 @@
 </head>
 
 <body id="page-top">
+
   <!-- Header -->
   <header class="masthead d-flex">
     <div class="container text-center my-auto">
@@ -37,48 +38,10 @@
             </a></strong></u>
         Jika Sudah Mempunyai
         Akun</p>
+      <p style="color: white;">Copyright &copy; Kelompok 33 <br> Pemograman Web 2020</p>
     </div>
     <div class="overlay"></div>
   </header>
-
-  <!-- About -->
-  <section class="content-section bg-light" id="about">
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <h2>Tentang Aplikasi</h2>
-          <p class="lead mb-5">Untuk Mengetahui Tetang Aplikasi Silakan Klik Tombol Tentang Dibawah Ini Atau
-            <a href="login.php" style="font-weight: bold;">Kembali</a></p>
-          <a class="btn btn-dark btn-xl js-scroll-trigger" href="about.html">Tentang</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer text-center">
-    <div class="container">
-      <ul class="list-inline mb-5">
-        <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" href="#!">
-            <i class="icon-social-facebook"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" href="#!">
-            <i class="icon-social-twitter"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white" href="#!">
-            <i class="icon-social-github"></i>
-          </a>
-        </li>
-      </ul>
-      <p class="text-muted small mb-0">Copyright &copy; Pemograman Web 2020</p>
-      <p class="text-muted small mb-0">Kelompok 33</p>
-    </div>
-  </footer>
 
   <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">

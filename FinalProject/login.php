@@ -1,10 +1,4 @@
 <?php
-//session_start();
-
-//if (isset($_SESSION['login'])) {
-//  header("Location: index.php");
-// exit;
-//}
 require 'functions.php';
 
 //Ketika Tombol login ditekan
@@ -17,13 +11,13 @@ if (isset($_POST['login'])) {
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
 
   <title>Login</title>
+
   <!-- Bootstrap Core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -34,7 +28,6 @@ if (isset($_POST['login'])) {
 
   <!-- Custom CSS -->
   <link href="css/stylish-portfolio.min.css" rel="stylesheet">
-
 </head>
 
 <body id="page-top">
@@ -65,6 +58,7 @@ if (isset($_POST['login'])) {
             <a href="index.php" style="color: white; margin-right: 3.5%;">Back</a>
           </li>
         </ul>
+
       </form>
 </body>
 
