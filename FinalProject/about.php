@@ -35,9 +35,8 @@
           <p class="lead mb-5" style="text-align: justify;">Salah jurusan merupakan hal yang sering disadari oleh
             mahasiswa ketika telah memasuki tahun ajaran ke dua dalam perkuliahan. Hal ini disebabkan oleh ketidaktahuan
             potensi diri yang dimiliki oleh mahasiswa ketika menjadi calon mahasiswa. Pembuatan aplikasi ini ditujukan
-            untuk memenuhi syarat Ujian Akhir Semester mata kuliah Pemrograman Web, Basis Data dan Metode Penelitian.
-
-            <br> Aplikasi ini bernama Prediksi Minat
+            untuk memenuhi syarat Ujian Akhir Semester mata kuliah Pemrograman Web, Basis Data dan Metode Penelitian. <br>
+            Aplikasi ini bernama Prediksi Minat
             Dan Bakat yang
             dikhususkan untuk siswa yang akan
             melanjutkan pendidikan kejenjang yang lebih tinggi. Dengan menggunakan aplikasi ini maka para calon
@@ -49,9 +48,8 @@
             data
             melalui database jika diperlukan.
             Semoga aplikasi ini dapat mempunyai dampak positif yang besar bagi para siswa agar lebih semangat dalam
-            menjalani proses pendidikan.
-            <br>
-            <a href="login.php" style="font-weight: bold; margin-left: 93%;">Logout</a></p>
+            menjalani proses pendidikan. <br>
+            <a href="home.php" style="font-weight: bold; margin-left: 93%;">Back</a></p>
           <a class="btn btn-dark btn-xl js-scroll-trigger" href="login.html">Login</a>
         </div>
       </div>

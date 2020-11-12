@@ -30,7 +30,7 @@ if (isset($_POST['login'])) {
   <link href="css/stylish-portfolio.min.css" rel="stylesheet">
 </head>
 
-<body id="page-top">
+<body>
   <header class="masthead d-flex">
     <div class="container text-center my-auto">
       <h1 class="mb-1">L o g i n</h1>
