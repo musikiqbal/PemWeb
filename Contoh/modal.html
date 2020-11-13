@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Cara membuat vertical center modal bootstrap v3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/modal-center.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <style>
+    .vertical-alignment-helper {
+      display: table;
+      height: 100%;
+      width: 100%;
+    }
+
+    .vertical-align-center {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .modal-content {
+      width: inherit;
+      height: inherit;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" style="margin-top: 50px;">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Modal Center</button>
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+              <p>Modal body</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
