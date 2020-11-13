@@ -37,7 +37,7 @@
 
   /*menu navigasi*/
   .menu {
-    background-color: #87CEFA;
+    background-color: cadetblue;
     border: 1px solid #f0f0f0;
     border-radius: 8px;
     margin-bottom: 10px;
@@ -86,11 +86,8 @@
 </style>
 
 <body>
-  <div class="content">
-    <header>
-      <h1 class="judul">HOME</h1>
-    </header>
-
+  <h1>Home</h1>
+  <div>
     <div class="menu">
       <ul>
         <li><a href="data user.php">Data User</a></li>

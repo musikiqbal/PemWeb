@@ -121,7 +121,7 @@ require 'functions.php';
         <a class="js-scroll-trigger" href="#portfolio">Hasil</a>
       </li>
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="#contact">Logout</a>
+        <a class="js-scroll-trigger" href="logout.php">Logout</a>
       </li>
     </ul>
   </nav>
@@ -131,16 +131,10 @@ require 'functions.php';
   <div class="wrap">
     <div class="menu">
       <div class="header">
-        <h1>Diagnosis</h1>
+        <h1>PREDIKSI</h1>
         <p>Pilih Jawaban Yang Tersedia Sesuai Keadaan Anda</p>
+        <hr style="border-top: 3px double; width: 1460px; margin-left: 2.6%;">
       </div>
-      <ul style="text-align: center; display: inline-block; width: 1480px; margin-left: 2%;">
-        <li style="background-color: lightgrey; font-weight: bold;"><a href="#">Logout</a></li>
-        <li style="background-color: lightgrey; font-weight: bold;"><a href="#">Diagnosis</a></li>
-        <li style="background-color: lightgrey; font-weight: bold;"><a href="#">Daftar Kecerdasan</a></li>
-        <li style="background-color: lightgrey; font-weight: bold;"><a href="#">About</a></li>
-        <li style="background-color: lightgrey; font-weight: bold;"><a href="home.php">Home</a></li>
-      </ul>
     </div>
     <div class="badan">
       <div class="sidebar">
@@ -166,17 +160,17 @@ require 'functions.php';
         </ul>
       </div>
       <div class="content">
-        <button type="submit" name="submit" onclick="return checkDiagnosa()" class="btn btn-primary" style="width: 55%;">CEK KECERDASAN</button>
+        <button type="submit" name="submit" onclick="return checkDiagnosa()" class="btn btn-primary" style="width: 55%;">CEK SEKARANG !!!</button>
         <br><br>
         <div class="box-body table-responsive col-lg-6">
           <u>HASIL PREDIKSI : <br></u>
           <br>
-          <table id="example1" class="table table-bordered table-striped" border="2" style="margin-left: 2%;">
+          <table id="example1" class="table table-bordered table-striped" border="2" style="margin-left: 2%; text-align: justify;">
             <thead>
               <tr>
-                <th>Jumlah Kondisi</th>
-                <th>Kecerdasan</th>
-                <th>Deskripsi</th>
+                <th style="text-align: center;">Jumlah Kondisi</th>
+                <th style="text-align: center;"> Kecerdasan</th>
+                <th style="text-align: center;">Deskripsi</th>
               </tr>
             </thead>
             <?php
