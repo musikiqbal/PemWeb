@@ -20,7 +20,7 @@ $persen_ips = (($nilai_ips / $nilai_total) * 100);
 ?>
 <div class="container">
 	<div class="col-sm-4"></div>
-	<div class="col-sm-4" style="background-color:darkseagreen;font-size:30pt;text-align:center;">
+	<div class="col-sm-4" style="background-color:darkseagreen;font-size:20pt;text-align:center;">
 		<?php echo $kata ?>
 	</div>
 	<div class="col-sm-4"></div>

@@ -23,29 +23,29 @@ $nisn = $_GET['nisn'];
 					<div class="col-sm-6">
 						<div class="form-grup">
 							<label>Fisika</label>
-							<input type="text" class="form-control" placeholder="10-100" name="fisika">
+							<input type="text" class="form-control" placeholder="10-100" name="fisika" autocomplete="off" autofocus required>
 						</div>
 						<div class="form-grup">
 							<label>Biologi</label>
-							<input type="text" class="form-control" placeholder="10-100" name="biologi">
+							<input type="text" class="form-control" placeholder="10-100" name="biologi" autocomplete="off" required>
 						</div>
 						<div class="form-grup">
 							<label>Matematika</label>
-							<input type="text" class="form-control" placeholder="10-100" name="matematika">
+							<input type="text" class="form-control" placeholder="10-100" name="matematika" autocomplete="off" required>
 						</div>
 					</div>
 					<div class="col-sm-6">
 						<div class="form-grup">
 							<label>Sejarah</label>
-							<input type="text" class="form-control" placeholder="10-100" name="sejarah">
+							<input type="text" class="form-control" placeholder="10-100" name="sejarah" autocomplete="off" required>
 						</div>
 						<div class="form-grup">
 							<label>Geografi</label>
-							<input type="text" class="form-control" placeholder="10-100" name="geografi">
+							<input type="text" class="form-control" placeholder="10-100" name="geografi" autocomplete="off" required>
 						</div>
 						<div class="form-grup">
 							<label>Bahasa Indonesia</label>
-							<input type="text" class="form-control" placeholder="10-100" name="bi">
+							<input type="text" class="form-control" placeholder="10-100" name="bi" autocomplete="off" required>
 						</div>
 						<div class="checkbox">
 							<label><input type="checkbox" value="y" name="cek">Apakah Sudah Benar...?</label>

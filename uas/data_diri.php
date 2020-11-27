@@ -18,7 +18,7 @@
 						</div>
 						<div class="form-grup">
 							<label>Nomor Induk Siswa (NIS)</label>
-							<input type="text" class="form-control" name="nisn" placeholder="xxxx" autocomplete="off" required>
+							<input type="text" class="form-control" name="nisn" placeholder="123456789" autocomplete="off" required>
 						</div>
 						<div class="form-grup">
 							<label>Alamat</label>
