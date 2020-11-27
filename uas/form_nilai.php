@@ -1,7 +1,8 @@
-<?php
-$nisn = $_GET['nisn'];
-?>
-<div class="container">
+
+		<?php 
+			$nisn=$_GET['nisn'];
+		 ?>
+	<div class="container">
 	<div class="row">
 		<div class="col-sm-1"></div>
 		<div class="col-sm-10">
@@ -9,65 +10,52 @@ $nisn = $_GET['nisn'];
 		</div>
 		<div class="col-sm-1"></div>
 	</div>
-	<div class="row">
+	<div class="row"> 
 		<div class="col-sm-1"></div>
 		<div class="col-sm-6">
-			<form action="index.php?halaman=proses&nisn=<?php echo  $nisn ?>" method="POST">
-
+			<form action="index.php?halaman=proses&nisn=<?php echo  $nisn?>" method="POST">
+				
 				<div class="form-grup">
-					<label>Nomor Induk Siswa</label>
-					<input type="text" class="form-control" value="<?php echo $nisn ?>" disabled>
-					<input type="hidden" class="form-control" value="<?php echo $nisn ?>" name="nisn">
+				<label>NISN</label>
+				<input type="text" class="form-control" value="<?php echo $nisn ?>"  disabled>
+				<input type="hidden" class="form-control" value="<?php echo $nisn ?>" name="nisn" >
 				</div>
-				<div class="row">
-					<div class="col-sm-6">
-						<div class="form-grup">
-							<label>Fisika</label>
-							<input type="text" class="form-control" placeholder="10-100" name="fisika" autocomplete="off" autofocus required>
-						</div>
-						<div class="form-grup">
-							<label>Biologi</label>
-							<input type="text" class="form-control" placeholder="10-100" name="biologi" autocomplete="off" required>
-						</div>
-						<div class="form-grup">
-							<label>Matematika</label>
-							<input type="text" class="form-control" placeholder="10-100" name="matematika" autocomplete="off" required>
-						</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="form-grup">
+						<label>Fisika</label>
+						<input type="text" class="form-control" placeholder="10-100" name="fisika">
 					</div>
-					<div class="col-sm-6">
-						<div class="form-grup">
-							<label>Sejarah</label>
-							<input type="text" class="form-control" placeholder="10-100" name="sejarah" autocomplete="off" required>
-						</div>
-						<div class="form-grup">
-							<label>Geografi</label>
-							<input type="text" class="form-control" placeholder="10-100" name="geografi" autocomplete="off" required>
-						</div>
-						<div class="form-grup">
-							<label>Bahasa Indonesia</label>
-							<input type="text" class="form-control" placeholder="10-100" name="bi" autocomplete="off" required>
-						</div>
-						<div class="checkbox">
-							<label><input type="checkbox" value="y" name="cek">Apakah Sudah Benar...?</label>
-						</div>
-						<input type="submit" value="Kirim" class="btn btn-info" style="margin-top:20px">
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
+					<div class="form-grup">
+						<label>biologi</label>
+						<input type="text" class="form-control" placeholder="10-100" name="biologi">
+					</div>
+					<div class="form-grup">
+						<label>matematika</label>
+						<input type="text" class="form-control" placeholder="10-100" name="matematika">
 					</div>
 				</div>
+				<div class="col-sm-6">
+					<div class="form-grup">
+						<label>Sejarah</label>
+						<input type="text" class="form-control" placeholder="10-100" name="sejarah">
+					</div>
+					<div class="form-grup">
+						<label>Geografi</label>
+						<input type="text" class="form-control" placeholder="10-100" name="geografi">
+					</div>
+					<div class="form-grup">
+						<label>Bahasa Indonesia</label>
+						<input type="text" class="form-control" placeholder="10-100" name="bi">
+					</div>
+					<div class="checkbox">
+					  <label><input type="checkbox" value="y" name="cek">Pastikan Data yang Dimasukkan Sudah Benar</label>
+					</div>
+					<input type="submit" value="Kirim" class="btn btn-info" style="margin-top:20px">
+				</div>
+			</div>
 			</form>
 		</div>
-		<br />
+		<br/>
 		<div class="col-sm-5"></div>
 	</div>
