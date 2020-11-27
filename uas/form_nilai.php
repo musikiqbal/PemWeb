@@ -48,7 +48,7 @@ $nisn = $_GET['nisn'];
 							<input type="text" class="form-control" placeholder="10-100" name="bi">
 						</div>
 						<div class="checkbox">
-							<label><input type="checkbox" value="y" name="cek">Pastikan Data yang Dimasukkan Sudah Benar</label>
+							<label><input type="checkbox" value="y" name="cek">Apakah Sudah Benar...?</label>
 						</div>
 						<input type="submit" value="Kirim" class="btn btn-info" style="margin-top:20px">
 						<br>
